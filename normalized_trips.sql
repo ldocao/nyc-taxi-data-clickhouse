@@ -22,7 +22,5 @@ CREATE TABLE normalized_trips (
     improvement_surcharge   Nullable(Float32),
     total_amount            Nullable(Float32),
     payment_type            Nullable(String),
-    trip_type               Nullable(UInt8),
-    pickup                  Nullable(String),
-    dropoff                 Nullable(String)
+    trip_type               Nullable(UInt8)
 ) ENGINE = Log;

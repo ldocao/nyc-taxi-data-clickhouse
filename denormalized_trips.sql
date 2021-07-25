@@ -23,8 +23,6 @@ CREATE TABLE denormalized_trips (
     total_amount            Nullable(Float32),
     payment_type            Nullable(String),
     trip_type               Nullable(UInt8),
-    pickup                  Nullable(String),
-    dropoff                 Nullable(String),
 
     precipitation           Nullable(Int8),
     snow_depth              Nullable(Int8),
