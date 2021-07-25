@@ -24,5 +24,5 @@ CREATE TABLE normalized_trips (
     payment_type            Nullable(String),
     trip_type               Nullable(UInt8),
     pickup                  Nullable(String),
-    dropoff                 Nullable(String),
+    dropoff                 Nullable(String)
 ) ENGINE = Log;

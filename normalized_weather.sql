@@ -5,6 +5,5 @@ CREATE TABLE normalized_weather (
     snowfall                Nullable(Int8),
     max_temperature         Nullable(Int8),
     min_temperature         Nullable(Int8),
-    average_wind_speed      Nullable(Int8),
-
+    average_wind_speed      Nullable(Int8)
 ) ENGINE = Log;
