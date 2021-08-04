@@ -14,3 +14,4 @@ sudo service clickhouse-server start
 clickhouse-client --multiquery --queries-file=denormalized_trips.sql --password=$PASSWORD
 clickhouse-client --multiquery --queries-file=normalized_trips.sql --password=$PASSWORD
 clickhouse-client --multiquery --queries-file=normalized_weather.sql --password=$PASSWORD
+clickhouse-client --multiquery --queries-file=normalized_trips_mergetree.sql --password=$PASSWORD
