@@ -1,3 +1,5 @@
+DROP TABLE IF EXISTS normalized_trips;
+
 CREATE TABLE normalized_trips (
     trip_id                 UInt32,
     vendor_id               String,

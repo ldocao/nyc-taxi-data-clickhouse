@@ -1,3 +1,5 @@
+DROP TABLE IF EXISTS denormalized_trips;
+
 CREATE TABLE denormalized_trips (
     trip_id                 UInt32,
     vendor_id               String,

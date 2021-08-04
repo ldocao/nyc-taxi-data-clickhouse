@@ -1,3 +1,5 @@
+DROP TABLE IF EXISTS normalized_weather;
+
 CREATE TABLE normalized_weather (
     date        Date,
     precipitation           Nullable(Float32),
