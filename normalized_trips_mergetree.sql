@@ -4,7 +4,7 @@ CREATE TABLE normalized_trips_mergetree
 ENGINE = MergeTree(pickup_date, pickup_datetime, 8192) -- partition by, primary key, index_granularity, see deprecated method for creating table https://clickhouse.tech/docs/en/engines/table-engines/mergetree-family/mergetree/
 AS SELECT
     trip_id,
-    CAST(vendor_id AS Enum8('1' = 1, '2' = 2, '3'= 3, '4' = 4, '5' = 5, 'CMT' = 6, , 'VTS' = 7, 'DDS' = 8, 'B02512' = 10, 'B02598' = 11, 'B02617' = 12, 'B02682' = 13, 'B02764' = 14, '' = 15)) AS vendor_id,
+    CAST(vendor_id AS Enum8('1' = 1, '2' = 2, '3'= 3, '4' = 4, '5' = 5, 'CMT' = 6, 'VTS' = 7, 'DDS' = 8, 'B02512' = 10, 'B02598' = 11, 'B02617' = 12, 'B02682' = 13, 'B02764' = 14, '' = 15)) AS vendor_id,
     toDate(pickup_datetime) AS pickup_date,
     ifNull(pickup_datetime, toDateTime(0)) AS pickup_datetime,
     toDate(dropoff_datetime) AS dropoff_date,
