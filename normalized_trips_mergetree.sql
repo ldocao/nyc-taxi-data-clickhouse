@@ -1,4 +1,4 @@
-CREATE TABLE denormalized_trips_mergetree
+CREATE TABLE normalized_trips_mergetree
 ENGINE = MergeTree(pickup_date, pickup_datetime, 8192) -- partition by, primary key, index_granularity, see deprecated method for creating table https://clickhouse.tech/docs/en/engines/table-engines/mergetree-family/mergetree/
 AS SELECT
     trip_id,
