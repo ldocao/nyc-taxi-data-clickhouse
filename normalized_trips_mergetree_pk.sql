@@ -1,6 +1,6 @@
 DROP TABLE IF EXISTS normalized_trips_mergetree_pk;
 
-CREATE TABLE normalized_trips_mergetree
+CREATE TABLE normalized_trips_mergetree_pk
 ENGINE = MergeTree(pickup_date, pickup_datetime, 8192) 
 ORDER BY trip_id
 AS SELECT
