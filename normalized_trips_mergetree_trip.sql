@@ -1,6 +1,6 @@
-DROP TABLE IF EXISTS normalized_trips_mergetree_pk;
+DROP TABLE IF EXISTS normalized_trips_mergetree_trip;
 
-CREATE TABLE normalized_trips_mergetree_pk
+CREATE TABLE normalized_trips_mergetree_trip
 ENGINE = MergeTree(pickup_date, trip_id, 8192) 
 AS SELECT
     trip_id,
