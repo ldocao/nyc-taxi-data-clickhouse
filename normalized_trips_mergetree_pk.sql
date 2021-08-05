@@ -1,8 +1,7 @@
 DROP TABLE IF EXISTS normalized_trips_mergetree_pk;
 
 CREATE TABLE normalized_trips_mergetree_pk
-ENGINE = MergeTree(pickup_date, pickup_datetime, 8192) 
-ORDER BY trip_id
+ENGINE = MergeTree(pickup_date, trip_id, 8192) 
 AS SELECT
     trip_id,
     CAST(vendor_id AS Enum8('1' = 1, '2' = 2, '3'= 3, '4' = 4, '5' = 5, 'CMT' = 6, 'VTS' = 7, 'DDS' = 8, 'B02512' = 10, 'B02598' = 11, 'B02617' = 12, 'B02682' = 13, 'B02764' = 14, '' = 15)) AS vendor_id,
