@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cd $HOME
+cd $HOME/nyc-taxi-data-clickhouse
 chmod u+x install_clickhouse.sh
 chmod u+x load_data.sh
 
