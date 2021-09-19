@@ -11,6 +11,7 @@ sudo apt-get install -y clickhouse-server clickhouse-client
 
 sudo service clickhouse-server start
 sudo touch '/var/lib/clickhouse/flags/force_drop_table' && sudo chmod 666 '/var/lib/clickhouse/flags/force_drop_table' #enable drop of table greater than 50GB
+sudo service clickhouse-server restart
 clickhouse-client --multiquery --queries-file=denormalized_trips.sql 
 clickhouse-client --multiquery --queries-file=normalized_trips.sql 
 clickhouse-client --multiquery --queries-file=normalized_weather.sql 
