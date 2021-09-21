@@ -8,3 +8,8 @@ sudo service clickhouse-server restart
 nohup ./load_denormalized_trips.sh & 
 nohup ./load_normalized_trips.sh & 
 nohup ./load_normalized_weather.sh &
+
+wait
+
+clickhouse-client --multiquery --queries-file=normalized_trips_mergetree_date.sql 
+clickhouse-client --multiquery --queries-file=normalized_trips_mergetree_trip.sql 
