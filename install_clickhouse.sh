@@ -15,6 +15,3 @@ sudo service clickhouse-server restart
 clickhouse-client --multiquery --queries-file=denormalized_trips.sql 
 clickhouse-client --multiquery --queries-file=normalized_trips.sql 
 clickhouse-client --multiquery --queries-file=normalized_weather.sql 
-clickhouse-client --multiquery --queries-file=normalized_trips_mergetree_date.sql 
-clickhouse-client --multiquery --queries-file=normalized_trips_mergetree_trip.sql 
-
